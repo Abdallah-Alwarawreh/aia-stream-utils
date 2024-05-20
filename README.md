@@ -1,7 +1,14 @@
 # AIA Stream Utils (ASU)
 
+**AIA socials**: [Youtube](https://www.youtube.com/c/AIAdev), [Twitch](https://www.twitch.tv/the_aia), [Discord](https://discord.gg/EqxuvWg), [Twitter/X](https://twitter.com/the_real_aia), [Patreon](https://www.patreon.com/AIAdev), [itch.io](https://aiadev.itch.io/)
+
+**[Bot invite](https://discord.com/oauth2/authorize?client_id=1242046324350652467&permissions=2048&scope=bot)**
+
 ## Description
-This is a simple for looking up your items/scrap on AIA's Stream.
+This is a simple for looking up your items/scrap on [AIA](https://www.twitch.tv/the_aia)'s Stream.
+
+## Got any suggestions?
+Just open an issue and we'll handle it.
 
 ## Features
 - Look up Scrap by user name/id
@@ -19,10 +26,6 @@ This is a simple for looking up your items/scrap on AIA's Stream.
 2. Install dependencies: `npm install`
 3. Configure the bot token and other settings in a `.env` file
 
-### Usage
-1. Start the bot: `node bot.js`
-2. Interact with the bot using commands.
-
 ## Contributing
 If you would like to contribute to the project, feel free to submit a pull request.
 
@@ -31,3 +34,4 @@ This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md
 
 ## Contact
 - If you have any questions or feedback, feel free to contact me at [AbooddevYT@outlook.com](mailto:AbooddevYT@outlook.com) or Dm me on discord abdallahdev
+- Support discord server [invite](https://discord.gg/8aaK9sC27r)

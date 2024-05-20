@@ -16,6 +16,11 @@ Just open an issue and we'll handle it.
 - Look up an Item
 - Leaderboard for the top scrap holders
 
+## Preview
+<img src="https://i.imgur.com/lr7Gokq.gif" alt="Leaderboard" width="600"/>
+<img src="https://i.imgur.com/o5zktAD.gif" alt="User lookup" width="600"/>
+<img src="https://i.imgur.com/Q3acicG.gif" alt="Item lookup" width="600"/>
+
 ## Getting Started
 ### Prerequisites
 - Discord server where you have permissions to add a bot

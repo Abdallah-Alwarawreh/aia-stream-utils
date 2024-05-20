@@ -39,15 +39,15 @@ enum Platform {
     Youtube = 1,
 }
 
-const GetScrapData = async (): Promise<APIScrap> => {
+const GetScrapData = async (): Promise<APIScrap[]> => {
     // /scrap
-    const response: AxiosResponse<APIScrap> = await client.get('/scrap');
+    const response: AxiosResponse<APIScrap[]> = await client.get('/scrap');
     return response.data;
 }
 
-const GetItemData = async (): Promise<APIItem> => {
+const GetItemData = async (): Promise<APIItem[]> => {
     // /item
-    const response: AxiosResponse<APIItem> = await client.get('/item');
+    const response: AxiosResponse<APIItem[]> = await client.get('/item');
     return response.data;
 }
 

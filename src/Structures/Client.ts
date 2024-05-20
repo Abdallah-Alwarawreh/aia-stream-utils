@@ -1,4 +1,4 @@
-import { ApplicationCommandDataResolvable, Client, ClientEvents, Collection, Guild } from "discord.js";
+import { ActivityType, ApplicationCommandDataResolvable, Client, ClientEvents, Collection, Guild } from "discord.js";
 import { CommandType } from "../typings/Command";
 import { promisify } from "util";
 import glob from "glob";
@@ -55,6 +55,11 @@ export class ExtendedClient extends Client {
                 Commands: SlashCommands,
                 GuildID: process.env.GuildID
             });
+
+            client.user.setPresence({
+  				activities: [{ name: `AIA's Stream`, type: ActivityType.Watching }],
+  				status: 'dnd',
+			});
         });
 
         const EventFiles = await globPromise(`${__dirname}/../Events/*{.ts,.js}`);

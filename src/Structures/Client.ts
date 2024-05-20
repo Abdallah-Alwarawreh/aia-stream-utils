@@ -12,7 +12,7 @@ export class ExtendedClient extends Client {
     commands: Collection<string, CommandType> = new Collection();
 
     constructor () {
-        super({ intents: ["Guilds", "GuildMessages", "DirectMessages", "MessageContent"] });
+        super({ intents: ["Guilds", "GuildMessages", "DirectMessages"] });
     }
 
     Start(){

@@ -13,7 +13,7 @@ interface APIItem {
     UserId: string;
     UserPlatform: Platform;
     DisplayName: string;
-    EventType: number;
+    EventType: EventType;
     EventRedeemValue: number;
     TimeModifier: number;
     PositionX: number;
@@ -39,6 +39,14 @@ enum Platform {
     Youtube = 1,
 }
 
+enum EventType {
+    Bits = 0,
+    Donation = 1,
+    Subscription = 2,
+    GiftedSubscription = 3,
+    ChannelPoints = 4
+}
+
 const GetScrapData = async (): Promise<APIScrap[]> => {
     // /scrap
     const response: AxiosResponse<APIScrap[]> = await client.get('/scrap');
@@ -51,4 +59,4 @@ const GetItemData = async (): Promise<APIItem[]> => {
     return response.data;
 }
 
-export { GetScrapData, GetItemData, APIItem, APIScrap };
+export { GetScrapData, GetItemData, APIItem, APIScrap, EventType, Platform };

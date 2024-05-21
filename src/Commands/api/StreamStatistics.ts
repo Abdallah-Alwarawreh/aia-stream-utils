@@ -14,7 +14,7 @@ export default new Command({
             { name: "Rank", value: data.rank.toString(), inline: true },
             { name: "Minutes Streamed", value: data.minutes_streamed.toString(), inline: true },
             { name: "Avg Viewers", value: data.avg_viewers.toString(), inline: true },
-            { name: "Max Viewers", value: data.max_viewers.toString(), inline: truest },
+            { name: "Max Viewers", value: data.max_viewers.toString(), inline: true },
             { name: "Hours Watched", value: data.hours_watched.toString(), inline: true },
             { name: "Followers", value: data.followers.toString(), inline: true },
             { name: "Followers Total", value: data.followers_total.toString(), inline: true }

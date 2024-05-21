@@ -1,8 +1,6 @@
 import axios, { AxiosResponse } from 'axios';
 
-const client = axios.create({
-  baseURL: 'https://aiastream.onrender.com/',
-});
+const client = axios.create();
 
 interface APIItem {
     _id: string;
@@ -34,6 +32,16 @@ interface APIScrap {
     ScrapCurrent: number;
 }
 
+interface StreamStatistics {
+    rank: number;
+    minutes_streamed: number;
+    avg_viewers: number;
+    max_viewers: number;
+    hours_watched: number;
+    followers: number;
+    followers_total: number;
+}
+
 enum Platform {
     Twitch = 0,
     Youtube = 1,
@@ -49,14 +57,21 @@ enum EventType {
 
 const GetScrapData = async (): Promise<APIScrap[]> => {
     // /scrap
-    const response: AxiosResponse<APIScrap[]> = await client.get('/scrap');
+    const response: AxiosResponse<APIScrap[]> = await client.get('https://aiastream.onrender.com/scrap');
     return response.data;
 }
 
 const GetItemData = async (): Promise<APIItem[]> => {
     // /item
-    const response: AxiosResponse<APIItem[]> = await client.get('/item');
+    const response: AxiosResponse<APIItem[]> = await client.get('https://aiastream.onrender.com/item');
     return response.data;
 }
 
-export { GetScrapData, GetItemData, APIItem, APIScrap, EventType, Platform };
+
+const GetStreamData = async (): Promise<StreamStatistics> => {
+    // https://twitchtracker.com/api/channels/summary/the_aia
+    const response: AxiosResponse<StreamStatistics> = await client.get('https://twitchtracker.com/api/channels/summary/the_aia');
+    return response.data;
+}
+
+export { GetScrapData, GetItemData, APIItem, APIScrap, EventType, Platform, GetStreamData };

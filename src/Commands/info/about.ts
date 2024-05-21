@@ -18,7 +18,8 @@ Note: This bot isn't affiliated with AIA's Studio it's just a bot that I made fo
                 name: "Abdallah Alwarawreh",
                 iconURL: "https://avatars.githubusercontent.com/u/66683380",
                 url: "https://github.com/Abdallah-Alwarawreh"
-            }).setFooter({
+            }).setColor("Green")
+            .setFooter({
                 text: "Made with ❤️ by Abdallah Alwarawreh"
             }).setTimestamp(Date.now());
 
